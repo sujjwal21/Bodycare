@@ -24,10 +24,15 @@ import {
     SunIcon,
 } from '@chakra-ui/icons';
 import logo from "../Images/1.png"
+import SignUp from './Signup';
+import SignIn from './SignIn';
+import { useState } from 'react';
 
 export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
     const { colorMode, toggleColorMode } = useColorMode();
+    const [signin,setSignin]=useState(false)
+    const [signup,setSignup]=useState(false)
 
     return (
         <Box>
@@ -58,10 +63,10 @@ export default function Navbar() {
                 </Flex>
                 <Flex >
                     
-                        <img src={logo} alt="logo" width={"100px"}  />
+                        <img src={logo} alt="logo" width={"150px"}  />
                   
                 </Flex>
-                <Flex style={{border:"1px solid" , padding:"10px",borderRadius:"10px"}}>
+                <Flex style={{border:"1px solid" , padding:"10px",borderRadius:"0px" ,width:"500px" ,height:"50px" ,justifyContent:"space-between" ,alignItems:"center"}}>
 
                  <input type={"text"} placeholder={"Enter to search"} style={{outline:"none"}}  />
                  <Button>Search</Button>
@@ -82,7 +87,9 @@ export default function Navbar() {
                         fontWeight={400}
                         variant={'link'}
                         href={'#'}>
-                        Sign In
+                            Account
+                            {/* <Button onClick={()=>setSignin(!signin)}>Sign in</Button>
+                        {signin?<SignIn/>:""} */}
                     </Button>
                     <Button
                         display={{ base: 'none', md: 'inline-flex' }}
@@ -94,7 +101,9 @@ export default function Navbar() {
                         _hover={{
                             bg: 'pink.300',
                         }}>
-                        Sign Up
+                            Cart
+                         {/* <Button onClick={()=>setSignup(!signup)}>Sign in</Button>
+                        {signup?<SignUp/>:""} */}
                     </Button>
                 </Stack>
             </Flex>
