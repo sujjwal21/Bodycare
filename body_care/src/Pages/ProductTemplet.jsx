@@ -6,10 +6,15 @@ import {
   Text,
   Stack,
   Image,
+  Flex,
+  Button,
 } from '@chakra-ui/react';
+import { useState } from 'react';
+import { BsHeartFill, BsHeart } from 'react-icons/bs';
 
 
 export default function ProductTemplate({image,brand,description,category,price,type,id}) {
+   const [liked, setLiked] = useState(false);
   return (
     <Center py={12}>
       <Box
@@ -61,13 +66,28 @@ export default function ProductTemplate({image,brand,description,category,price,
           </Heading>
           <Stack direction={'row'} align={'center'}>
             <Text fontWeight={800} fontSize={'xl'}>
-              ${price}
+              ₹{price}
             </Text>
             <Text textDecoration={'line-through'} color={'gray.600'}>
-              ${price*2}
+              ₹{price*5}
             </Text>
           </Stack>
         </Stack>
+         <Flex
+            p={4}
+            alignItems="center"
+            justifyContent={'space-between'}
+            roundedBottom={'sm'}
+            borderLeft={'1px'}
+            cursor="pointer"
+            onClick={() => setLiked(!liked)}>
+            {liked ? (
+              <BsHeartFill fill="red" fontSize={'24px'} />
+            ) : (
+              <BsHeart fontSize={'24px'} />
+            )}
+            <Button>Add to cart</Button>
+          </Flex>
       </Box>
     </Center>
   );

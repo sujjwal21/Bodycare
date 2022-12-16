@@ -7,13 +7,13 @@ import Slider from 'react-slick';
 
 // Settings for the slider
 const settings = {
-  dots: true,
-  arrows: false,
+  dots:true,
+  arrows: true,
   fade: true,
   infinite: true,
   autoplay: true,
   speed: 500,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 3000,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
@@ -45,6 +45,7 @@ export default function Carousel() {
       overflow={'hidden'}
       marginLeft={"5vw"}
       marginTop="20px"
+      marginBottom={'40px'}
       >
       {/* CSS files for react-slick */}
       <link

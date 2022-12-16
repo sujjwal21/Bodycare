@@ -12,9 +12,10 @@ function App() {
       {/* <h1>Hello Everyone</h1> */}
       {/* <Navbar/> */}
       <AllRoutes/>
-      <MainFooter/>
+      <Products/>
+
+      {/* <MainFooter/> */}
       {/* <Footer/> */}
-      {/* <Products/> */}
       {/* <ProductTemplate/> */}
     </div>
   );

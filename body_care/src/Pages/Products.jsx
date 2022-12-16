@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 function Products(props) {
     const [data,setData]=useState([])
     useEffect(()=>{
-        axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=lipstick`)
+        axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json`)
         .then(res=>setData(res.data))
        .catch(err=>console.log(err))
     },[])

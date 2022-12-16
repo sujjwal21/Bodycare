@@ -24,15 +24,28 @@ import {
     SunIcon,
 } from '@chakra-ui/icons';
 import logo from "../Images/1.png"
-import SignUp from './Signup';
-import SignIn from './SignIn';
-import { useState } from 'react';
+import axios from 'axios';
+// import SignUp from './Signup';
+// import SignIn from './SignIn';
+import { useState,useEffect } from 'react';
+
+
 
 export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
     const { colorMode, toggleColorMode } = useColorMode();
-    const [signin,setSignin]=useState(false)
-    const [signup,setSignup]=useState(false)
+    // const [signin,setSignin]=useState(false)
+    // const [signup,setSignup]=useState(false)
+
+    
+    const [data,setData]=useState([])
+    const [search,setSearch]=useState("lipstick")
+    useEffect(()=>{
+        axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=${search}`)
+        .then(res=>setData(res.data))
+       .catch(err=>console.log(err))
+    },[search])
+console.log(data)
 
     return (
         <Box>
@@ -68,7 +81,7 @@ export default function Navbar() {
                 </Flex>
                 <Flex style={{border:"1px solid" , padding:"10px",borderRadius:"0px" ,width:"500px" ,height:"50px" ,justifyContent:"space-between" ,alignItems:"center"}}>
 
-                 <input type={"text"} placeholder={"Enter to search"} style={{outline:"none"}}  />
+                 <input type={"text"} placeholder={"Enter to search"} style={{outline:"none"}} onChange={(e)=>setSearch(e.target.value)} />
                  <Button>Search</Button>
 
                 </Flex>

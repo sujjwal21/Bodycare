@@ -51,7 +51,9 @@ const ListHeader = ({ children } ) => {
 export default function Footer() {
   return (
     <>
-     {/* <hr color='black'  /> */}
+     {/* <hr color='black'  />   */}
+            <hr style={{border:"1px solid black"}}/>
+
       <Stack marginBottom={"50px"} marginTop={"50px"} marginLeft={"40vw"} direction={'row'} spacing={201}>
               <SocialButton label={'Twitter'} href={'#'}>
                 <FaTwitter />
@@ -63,7 +65,7 @@ export default function Footer() {
                 <FaInstagram />
               </SocialButton>
             </Stack>
-            {/* <hr color='black'/> */}
+            <hr style={{border:"1px solid black"}}/>
     <Box
       bg={useColorModeValue('gray.50', 'gray.900')}
       color={useColorModeValue('gray.700', 'gray.200')}>
@@ -72,7 +74,10 @@ export default function Footer() {
           templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 1fr 1fr' }}
           spacing={10}>
           <Stack spacing={20}>
+            
+
             <Stack align={'flex-start'}>
+              <hr style={{border:"1px solid black",width:"200px"}}/>
             <ListHeader>Help & Information</ListHeader>
             <Link href={'#'}>Coustomer Service</Link>
             <Link href={'#'}>Delivery Information</Link>
@@ -92,6 +97,8 @@ export default function Footer() {
           </Stack>
           
           <Stack align={'flex-start'}>
+            <hr style={{border:"1px solid black",width:"100px"}}/>
+
             <ListHeader>About SkinStore</ListHeader>
             <Link href={'#'}>Key Workers Discount</Link>
             <Link href={'#'}>About Us</Link>
