@@ -3,7 +3,7 @@ import Footer from './Footer';
 
 function MainFooter(props) {
     return (
-        <div>
+        <div style={{marginTop:"20px"}}>
             <Footer/>
         </div>
     );
