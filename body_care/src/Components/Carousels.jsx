@@ -7,13 +7,13 @@ import Slider from 'react-slick';
 
 // Settings for the slider
 const settings = {
-  dots: true,
-  arrows: false,
+  dots:true,
+  arrows: true,
   fade: true,
   infinite: true,
   autoplay: true,
   speed: 500,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 3000,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
@@ -30,21 +30,22 @@ export default function Carousel() {
 
   // These are the images used in the slide
   const cards = [
-    'https://static.thcdn.com/images/medium/original/widgets/121-us/00/original-Shot6-580x384-095500.jpeg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
-    'https://static.thcdn.com/images/medium/original/widgets/121-us/50/original-1130-STDCRE-44452-SS-MH-Q4-Photography-December-THG0035165-Batching-And-Artwork-P2-Shot-2-580x384.jpeg-050550.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
-    'https://static.thcdn.com/images/medium/original/widgets/121-us/04/New_Project_%287%29-090104.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
-    'https://static.thcdn.com/images/medium/original/widgets/121-us/00/original-Shot6-580x384-095500.jpeg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
-    'https://static.thcdn.com/images/medium/original/widgets/121-us/50/original-1130-STDCRE-44452-SS-MH-Q4-Photography-December-THG0035165-Batching-And-Artwork-P2-Shot-2-580x384.jpeg-050550.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60'
+    'https://static.thcdn.com/images/medium/original/widgets/121-us/00/original-Shot6-580x384-095500.jpeg',
+    'https://static.thcdn.com/images/medium/original/widgets/121-us/50/original-1130-STDCRE-44452-SS-MH-Q4-Photography-December-THG0035165-Batching-And-Artwork-P2-Shot-2-580x384.jpeg-050550.jpg',
+    'https://static.thcdn.com/images/medium/original/widgets/121-us/04/New_Project_%287%29-090104.jpg',
+    'https://static.thcdn.com/images/medium/original/widgets/121-us/00/original-Shot6-580x384-095500.jpeg',
+    'https://static.thcdn.com/images/medium/original/widgets/121-us/50/original-1130-STDCRE-44452-SS-MH-Q4-Photography-December-THG0035165-Batching-And-Artwork-P2-Shot-2-580x384.jpeg-050550.jpg'
   ];
 
   return (
     <Box
       position={'relative'}
-      height={'550px'}
+      height={'lg'}
       width={'90vw'}
       overflow={'hidden'}
       marginLeft={"5vw"}
       marginTop="20px"
+      marginBottom={'40px'}
       >
       {/* CSS files for react-slick */}
       <link
@@ -89,7 +90,8 @@ export default function Carousel() {
         {cards.map((url, index) => (
           <Box  
             key={index}
-            height={'md'}
+            height={'xl'}
+            // width={'100px'}
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
