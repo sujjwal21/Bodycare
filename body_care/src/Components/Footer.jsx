@@ -52,20 +52,20 @@ export default function Footer() {
   return (
     <>
      {/* <hr color='black'  />   */}
-            <hr style={{border:"1px solid black"}}/>
+            <hr color='black'/>
 
       <Stack marginBottom={"50px"} marginTop={"50px"} marginLeft={"40vw"} direction={'row'} spacing={201}>
               <SocialButton label={'Twitter'} href={'#'}>
-                <FaTwitter />
+                <FaTwitter style={{color:"blue" ,fontSize:"30px"}} />
               </SocialButton>
               <SocialButton label={'YouTube'} href={'#'}>
-                <FaYoutube />
+                <FaYoutube style={{color:"red"  ,fontSize:"30px"}} />
               </SocialButton>
               <SocialButton label={'Instagram'} href={'#'}>
-                <FaInstagram />
+                <FaInstagram  style={{color:"red"  ,fontSize:"30px"}}/>
               </SocialButton>
             </Stack>
-            <hr style={{border:"1px solid black"}}/>
+            <hr style={{color:"black"}}/>
     <Box
       bg={useColorModeValue('gray.50', 'gray.900')}
       color={useColorModeValue('gray.700', 'gray.200')}>
@@ -77,7 +77,7 @@ export default function Footer() {
             
 
             <Stack align={'flex-start'}>
-              <hr style={{border:"1px solid black",width:"200px"}}/>
+              <hr style={{border:"1px solid black",width:"250px"}}/>
             <ListHeader>Help & Information</ListHeader>
             <Link href={'#'}>Coustomer Service</Link>
             <Link href={'#'}>Delivery Information</Link>
@@ -97,7 +97,7 @@ export default function Footer() {
           </Stack>
           
           <Stack align={'flex-start'}>
-            <hr style={{border:"1px solid black",width:"100px"}}/>
+            <hr style={{border:"1px solid black",width:"150px"}}/>
 
             <ListHeader>About SkinStore</ListHeader>
             <Link href={'#'}>Key Workers Discount</Link>
@@ -110,13 +110,18 @@ export default function Footer() {
             <Link href={'#'}>Join Body care Expert</Link>
           </Stack>
           <Stack align={'flex-start'}>
+            <hr style={{border:"1px solid black" ,width:"150px"}}/>
+
             <ListHeader>Legal</ListHeader>
             <Link href={'#'}>Cookie Information</Link>
             <Link href={'#'}>Privacy Policye</Link>
             <Link href={'#'}>Terms & Conditions</Link>
+            
             <Link href={'#'}>Modern Slavery Statement</Link>          
           </Stack>
           <Stack align={'flex-start'}>
+            <hr style={{border:"1px solid black",width:"180px"}}/>
+
             <ListHeader>How To Contact Us</ListHeader>
             <Link href={'#'}>Message Us</Link>
             <Link href={'#'}>Free Beauty Consultations</Link>        
