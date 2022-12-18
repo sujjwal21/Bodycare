@@ -12,7 +12,7 @@ export default function AllRoutes(){
         <Route path="/" element={<Home/>}></Route>
         <Route path="/login" element={<SignIn/>}></Route>
         <Route path="/register" element={<SignUp/>}></Route>
-        <Route path="/product" element={<Products/>}></Route>
+        <Route path="/login/product" element={<Products/>}></Route>
         <Route path="/products" element={<ProductsByBrand/>}></Route>
     </Routes>
 }
