@@ -16,7 +16,7 @@ function App() {
       <AllRoutes/>
       {/* <ProductsByBrand/>
        */}
-       <Dashboard/>
+       {/* <Dashboard/> */}
       {/* <Products/> */}
       {/* <MainFooter/> */}
       {/* <Footer/> */}
