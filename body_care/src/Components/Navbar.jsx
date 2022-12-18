@@ -79,9 +79,9 @@ console.log(data)
                         <img src={logo} alt="logo" width={"150px"}  />
                   
                 </Flex>
-                <Flex style={{border:"1px solid" , padding:"10px",borderRadius:"0px" ,width:"500px" ,height:"50px" ,justifyContent:"space-between" ,alignItems:"center"}}>
+                <Flex style={{border:"1px solid" , padding:"10px" ,height:"50px" ,justifyContent:"space-between" ,alignItems:"center"}}>
 
-                 <input type={"text"} placeholder={"Enter to search"} style={{outline:"none"}} onChange={(e)=>setSearch(e.target.value)} />
+                 <input type={"text"} placeholder={"Enter to search"} style={{outline:"none",width:"400px"}} onChange={(e)=>setSearch(e.target.value)} />
                  <Button>Search</Button>
 
                 </Flex>
@@ -276,22 +276,32 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
     {
-        label: 'Inspiration',
+        label: 'Brands',
         children: [
             {
-                label: 'Explore Design Work',
+                label: 'Populer Category',
                 subLabel: 'Trending Design to inspire you',
                 href: '#',
             },
             {
-                label: 'New & Noteworthy',
+                label: 'By Gift Idea',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'By Price',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Category',
                 subLabel: 'Up-and-coming Designers',
                 href: '#',
             },
         ],
     },
     {
-        label: 'Find Work',
+        label: 'Holiday Gifts',
         children: [
             {
                 label: 'Job Board',
@@ -304,13 +314,5 @@ const NAV_ITEMS = [
                 href: '#',
             },
         ],
-    },
-    {
-        label: 'Learn Design',
-        href: '#',
-    },
-    {
-        label: 'Hire Designers',
-        href: '#',
-    },
+    }
 ];

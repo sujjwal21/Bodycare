@@ -116,6 +116,7 @@ export default function Footer() {
             <Link href={'#'}>Cookie Information</Link>
             <Link href={'#'}>Privacy Policye</Link>
             <Link href={'#'}>Terms & Conditions</Link>
+            
             <Link href={'#'}>Modern Slavery Statement</Link>          
           </Stack>
           <Stack align={'flex-start'}>

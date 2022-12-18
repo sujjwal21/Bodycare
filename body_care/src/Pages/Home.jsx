@@ -5,25 +5,33 @@ import Navbar from '../Components/Navbar';
 import {Flex,Button,Stack,Spacer, Box} from "@chakra-ui/react"
 import {Link} from "react-router-dom"
 import { GiShoppingBag } from 'react-icons/gi';
+import Carosuelnew from '../Components/Carosuelnew';
 
 function Home(props) {
     return (
         <div>
             <Navbar/>
-            <Carousel/>
+            {/* <Carousel/> */}
+            <Carosuelnew/>
             <Stack style={{padding:"20px",marginLeft:"50px"}}>
                 <h1 style={{fontSize:"40px"}}>Shop by Category</h1>
                 <Flex spacing="250px">
                    <Link> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/04/round_widget_ss_homepage_-_Untitled_Page-062904.png" style={{width:"280px"}}/></Link>
                    <Spacer />
                    
-                   <Link> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/04/round_widget_ss_homepage_-_Untitled_Page-062904.png" style={{width:"280px"}}/></Link>
+                   <Link> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/06/round_widget_ss_homepage_-_Untitled_Page_%281%29-062906.png" style={{width:"280px"}}/></Link>
                    <Spacer />
                    
-                   <Link> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/04/round_widget_ss_homepage_-_Untitled_Page-062904.png" style={{width:"280px"}}/></Link>
+                   <Link> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/26/round_widget_ss_homepage_-_Untitled_Page_%282%29-062926.png" style={{width:"280px"}}/></Link>
                    <Spacer />
                    
-                   <Link> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/04/round_widget_ss_homepage_-_Untitled_Page-062904.png" style={{width:"280px"}}/></Link>
+                   <Link> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/07/round_widget_ss_homepage_-_Untitled_Page_%286%29-063207.png" style={{width:"280px"}}/></Link>
+                   <Spacer />
+
+                    <Link> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/11/round_widget_ss_homepage_-_Untitled_Page_%283%29-063011.png" style={{width:"280px"}}/></Link>
+                   <Spacer />
+                   
+                   <Link> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/32/round_widget_ss_homepage_-_Untitled_Page_%285%29-063132.png" style={{width:"280px"}}/></Link>
                    <Spacer />
 
                 </Flex>
