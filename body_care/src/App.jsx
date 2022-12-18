@@ -3,6 +3,8 @@ import './App.css';
 // import MainFooter from './Components/MainFooter';
 // import Navbar from "./Components/Navbar"
 import AllRoutes from './Pages/AllRoutes';
+import Dashboard from './Pages/Dashboard';
+import ProductsByBrand from './Pages/ProductByBrand';
 import Products from './Pages/Products';
 // import ProductTemplate from './Pages/ProductTemplet';
 
@@ -12,7 +14,10 @@ function App() {
       {/* <h1>Hello Everyone</h1> */}
       {/* <Navbar/> */}
       <AllRoutes/>
-      <Products/>
+      {/* <ProductsByBrand/>
+       */}
+       <Dashboard/>
+      {/* <Products/> */}
       {/* <MainFooter/> */}
       {/* <Footer/> */}
       {/* <ProductTemplate/> */}

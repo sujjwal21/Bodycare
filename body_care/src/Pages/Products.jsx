@@ -16,7 +16,7 @@ function Products(props) {
     // image,branddescription,category,price,type,id
     return (
         <div>
-            <Grid templateColumns='repeat(5, 1fr)' gap={6}>
+            <Grid templateColumns='repeat(3, 1fr)' gap={6}>
             {/* <h1>hello</h1> */}
             {data?.map((el)=><Link to={`/product/${el.id}`} key={el.id}><ProductTemplate image={el.api_featured_image} brand={el.brand} description={el.description} category={el.category} price={el.price} type={el.type} key={el.id} /></Link>)}
             </Grid>

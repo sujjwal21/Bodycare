@@ -56,13 +56,13 @@ export default function Footer() {
 
       <Stack marginBottom={"50px"} marginTop={"50px"} marginLeft={"40vw"} direction={'row'} spacing={201}>
               <SocialButton label={'Twitter'} href={'#'}>
-                <FaTwitter />
+                <FaTwitter style={{color:"blue" ,fontSize:"30px"}} />
               </SocialButton>
               <SocialButton label={'YouTube'} href={'#'}>
-                <FaYoutube />
+                <FaYoutube style={{color:"red"  ,fontSize:"30px"}} />
               </SocialButton>
               <SocialButton label={'Instagram'} href={'#'}>
-                <FaInstagram />
+                <FaInstagram  style={{color:"red"  ,fontSize:"30px"}}/>
               </SocialButton>
             </Stack>
             <hr style={{color:"black"}}/>

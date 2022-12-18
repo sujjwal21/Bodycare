@@ -10,16 +10,34 @@ import {
   Stack,
   Image,
 } from '@chakra-ui/react';
+import MainFooter from './MainFooter';
+import Navbar from './Navbar';
+import React from 'react'
+// import { AuthContext } from '../Contexts/AuthContext';
+import { useContext } from 'react'
+// import { useEffect } from 'react'
+import { useState } from 'react'
 
 export default function SignUp() {
+   
+    const [text,setText]=useState({email:"",password:""})
+    const [email,setEmail]=useState("")
+    const [password,setpassword]=useState("")
+    
   return (
+    <Stack>
+      <Navbar/>
     <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
       <Flex p={8} flex={1} align={'center'} justify={'center'}>
         <Stack spacing={4} w={'full'} maxW={'md'}>
           <Heading fontSize={'2xl'}>Sign in to your account</Heading>
           <FormControl id="email">
             <FormLabel>Email address</FormLabel>
-            <Input type="email" />
+            <Input   value={email}
+                    type = "email"
+                    data-testid = "email"
+                    placeholder = "Enter Email"
+                    onChange={(e)=>setEmail(e.target.value)} />
           </FormControl>
           <FormControl id="password">
             <FormLabel>Password</FormLabel>
@@ -31,7 +49,7 @@ export default function SignUp() {
               align={'start'}
               justify={'space-between'}>
               <Checkbox>Remember me</Checkbox>
-              <Link color={'blue.500'}>Forgot password?</Link>
+              {/* <Link color={'blue.500'}>Forgot password?</Link> */}
             </Stack>
             <Button colorScheme={'blue'} variant={'solid'}>
               Sign in
@@ -48,6 +66,8 @@ export default function SignUp() {
           }
         />
       </Flex>
+    </Stack>
+    <MainFooter/>
     </Stack>
   );
 }

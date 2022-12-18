@@ -28,6 +28,8 @@ import axios from 'axios';
 // import SignUp from './Signup';
 // import SignIn from './SignIn';
 import { useState,useEffect } from 'react';
+// import { Navigate } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 
 
 
@@ -46,6 +48,11 @@ export default function Navbar() {
        .catch(err=>console.log(err))
     },[search])
 console.log(data)
+
+//  const handelSignIn=()=>{
+//     console.log("hello ")
+//     return <Navigate to={"/login"}/>
+//  }
 
     return (
         <Box>
@@ -76,7 +83,7 @@ console.log(data)
                 </Flex>
                 <Flex >
                     
-                        <img src={logo} alt="logo" width={"150px"}  />
+                        <RouterLink to={"/"}><img src={logo} alt="logo" width={"150px"}  /></RouterLink>
                   
                 </Flex>
                 <Flex style={{border:"1px solid" , padding:"10px" ,height:"50px" ,justifyContent:"space-between" ,alignItems:"center"}}>
@@ -94,7 +101,7 @@ console.log(data)
                     <Button onClick={toggleColorMode}>
                         {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
                     </Button>
-                    <Button
+                    {/* <Button
                         as={'a'}
                         fontSize={'sm'}
                         fontWeight={400}
@@ -103,7 +110,9 @@ console.log(data)
                             Account
                             {/* <Button onClick={()=>setSignin(!signin)}>Sign in</Button>
                         {signin?<SignIn/>:""} */}
-                    </Button>
+                    {/* </Button> */}
+                   <Button> <RouterLink to={"/login"}>SignUp</RouterLink></Button>
+                   <Button> <RouterLink to={"/register"}>SignIn</RouterLink></Button>
                     <Button
                         display={{ base: 'none', md: 'inline-flex' }}
                         fontSize={'sm'}
@@ -124,7 +133,8 @@ console.log(data)
             <Collapse in={isOpen} animateOpacity>
                 <MobileNav />
             </Collapse>
-             <DesktopNav />
+            <Box style={{display:"flex",justifyContent:"center",alignItems:"center", height:"40px"}}  > <DesktopNav /></Box>
+            
         </Box>
     );
 }
@@ -135,7 +145,7 @@ const DesktopNav = () => {
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
     return (
-        <Stack direction={'row'} spacing={4}>
+        <Stack direction={'row'} spacing={8}>
             {NAV_ITEMS.map((navItem) => (
                 <Box key={navItem.label}>
                     <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -189,7 +199,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
                 <Box>
                     <Text
                         transition={'all .3s ease'}
-                        _groupHover={{ color: 'pink.400' }}
+                        _groupHover={{ color: 'blue.300' }}
                         fontWeight={500}>
                         {label}
                     </Text>
@@ -203,7 +213,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
                     justify={'flex-end'}
                     align={'center'}
                     flex={1}>
-                    <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+                    <Icon color={'blue.400'} w={5} h={5} as={ChevronRightIcon} />
                 </Flex>
             </Stack>
         </Link>
@@ -298,6 +308,16 @@ const NAV_ITEMS = [
                 subLabel: 'Up-and-coming Designers',
                 href: '#',
             },
+            {
+                label: 'Job Board',
+                subLabel: 'Find your dream design job',
+                href: '#',
+            },
+            {
+                label: 'Freelance Projects',
+                subLabel: 'An exclusive list for contract work',
+                href: '#',
+            },
         ],
     },
     {
@@ -313,6 +333,475 @@ const NAV_ITEMS = [
                 subLabel: 'An exclusive list for contract work',
                 href: '#',
             },
+             {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Gift Idea',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'By Price',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Category',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+            {
+                label: 'Job Board',
+                subLabel: 'Find your dream design job',
+                href: '#',
+            },
+            {
+                label: 'Freelance Projects',
+                subLabel: 'An exclusive list for contract work',
+                href: '#',
+            },
         ],
-    }
+    },
+        {
+        label: 'Sale',
+        children: [ {
+                label: 'Job Board',
+                subLabel: 'Find your dream design job',
+                href: '#',
+            },
+            {
+                label: 'Freelance Projects',
+                subLabel: 'An exclusive list for contract work',
+                href: '#',
+            },
+             {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Gift Idea',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'By Price',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Category',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+        ],
+    },
+        {
+        label: 'Skincare',
+        children: [
+            {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Gift Idea',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'By Price',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Category',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'Job Board',
+                subLabel: 'Find your dream design job',
+                href: '#',
+            },
+            {
+                label: 'Freelance Projects',
+                subLabel: 'An exclusive list for contract work',
+                href: '#',
+            },
+             {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+        ],
+    },
+        {
+        label: 'Hair',
+        children: [
+             {
+                label: 'Job Board',
+                subLabel: 'Find your dream design job',
+                href: '#',
+            },
+            {
+                label: 'Freelance Projects',
+                subLabel: 'An exclusive list for contract work',
+                href: '#',
+            },
+             {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Gift Idea',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'By Price',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Category',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+        ],
+    },
+        {
+        label: 'Makeup',
+        children: [
+            {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Gift Idea',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'By Price',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Category',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'Job Board',
+                subLabel: 'Find your dream design job',
+                href: '#',
+            },
+            {
+                label: 'Freelance Projects',
+                subLabel: 'An exclusive list for contract work',
+                href: '#',
+            },
+             {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+        ],
+    },
+        {
+        label: 'Bath & Body',
+        children: [
+             {
+                label: 'Job Board',
+                subLabel: 'Find your dream design job',
+                href: '#',
+            },
+            {
+                label: 'Freelance Projects',
+                subLabel: 'An exclusive list for contract work',
+                href: '#',
+            },
+             {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Gift Idea',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'By Price',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Category',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+        ],
+    },
+        {
+        label: 'Fragrance',
+        children: [
+            {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Gift Idea',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'By Price',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Category',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'Job Board',
+                subLabel: 'Find your dream design job',
+                href: '#',
+            },
+            {
+                label: 'Freelance Projects',
+                subLabel: 'An exclusive list for contract work',
+                href: '#',
+            },
+             {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+        ],
+    },
+        {
+        label: 'Self-Care',
+        children: [
+            {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Gift Idea',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'By Price',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Category',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'Job Board',
+                subLabel: 'Find your dream design job',
+                href: '#',
+            },
+            {
+                label: 'Freelance Projects',
+                subLabel: 'An exclusive list for contract work',
+                href: '#',
+            },
+             {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+        ],
+    },
+        {
+        label: 'Tolls',
+        children: [
+             {
+                label: 'Job Board',
+                subLabel: 'Find your dream design job',
+                href: '#',
+            },
+            {
+                label: 'Freelance Projects',
+                subLabel: 'An exclusive list for contract work',
+                href: '#',
+            },
+             {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Gift Idea',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'By Price',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Category',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+        ],
+    },
+        {
+        label: 'New Trending ',
+        children: [
+             {
+                label: 'Job Board',
+                subLabel: 'Find your dream design job',
+                href: '#',
+            },
+            {
+                label: 'Freelance Projects',
+                subLabel: 'An exclusive list for contract work',
+                href: '#',
+            },
+             {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Gift Idea',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'By Price',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Category',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+        ],
+    },
+        {
+        label: 'Building Routine',
+        children: [
+             {
+                label: 'Job Board',
+                subLabel: 'Find your dream design job',
+                href: '#',
+            },
+            {
+                label: 'Freelance Projects',
+                subLabel: 'An exclusive list for contract work',
+                href: '#',
+            },
+             {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Gift Idea',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'By Price',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Category',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+        ],
+    },
+        {
+        label: 'Blog',
+        children: [
+            {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Gift Idea',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'By Price',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+            {
+                label: 'By Category',
+                subLabel: 'Up-and-coming Designers',
+                href: '#',
+            },
+             {
+                label: 'Job Board',
+                subLabel: 'Find your dream design job',
+                href: '#',
+            },
+            {
+                label: 'Freelance Projects',
+                subLabel: 'An exclusive list for contract work',
+                href: '#',
+            },
+             {
+                label: 'Populer Category',
+                subLabel: 'Trending Design to inspire you',
+                href: '#',
+            },
+        ],
+    },
 ];

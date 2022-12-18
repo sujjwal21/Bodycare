@@ -6,13 +6,17 @@ import {Flex,Button,Stack,Spacer, Box} from "@chakra-ui/react"
 import {Link} from "react-router-dom"
 import { GiShoppingBag } from 'react-icons/gi';
 import Carosuelnew from '../Components/Carosuelnew';
+import { Link as RouterLink } from 'react-router-dom';
 
 function Home(props) {
     return (
         <div>
             <Navbar/>
+            
             {/* <Carousel/> */}
+            <RouterLink to={"/product"}><Button><h1>Click to View All Products</h1></Button></RouterLink>
             <Carosuelnew/>
+            <div> </div>
             <Stack style={{padding:"20px",marginLeft:"50px"}}>
                 <h1 style={{fontSize:"40px"}}>Shop by Category</h1>
                 <Flex spacing="250px">
