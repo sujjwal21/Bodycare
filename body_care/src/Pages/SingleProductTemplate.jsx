@@ -14,14 +14,14 @@ import { BsHeartFill, BsHeart } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 
-export default function ProductTemplate({image,brand,description,category,price,type,id}) {
+export default function SingleProductTemplate({image,brand,description,category,price,type,id}) {
    const [liked, setLiked] = useState(false);
   return (
     <Center py={12}>
       <Box
         role={'group'}
         p={6}
-        maxW={'330px'}
+        // maxW={'330px'}
         w={'full'}
         bg={useColorModeValue('white', 'gray.800')}
         boxShadow={'2xl'}
@@ -34,7 +34,7 @@ export default function ProductTemplate({image,brand,description,category,price,
           rounded={'lg'}
           mt={-12}
           pos={'relative'}
-          height={'230px'}
+          height={'330px'}
           _after={{
             transition: 'all .3s ease',
             content: '""',
@@ -54,20 +54,21 @@ export default function ProductTemplate({image,brand,description,category,price,
           }}>
           <Image
             rounded={'lg'}
-            height={230}
-            width={282}
+            height={430}
+            width={482}
             objectFit={'cover'}
             src={image}
+            marginLeft={"30vw"}
           />
         </Box>
         <Stack pt={10} align={'center'}>
-          <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
-           <h1> Brand:{brand}</h1>
+          <Text marginTop={"60px"} color={'gray.500'} fontSize={'20px'} textTransform={'uppercase'}>
+            Brand:{brand}
           </Text>
           <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
            Categorey:{category}
           </Heading>
-          <Text noOfLines={1} >Description:--{description}</Text>
+          <Text  >Description:--{description}</Text>
           <p>Type:{type}</p>
           <Stack direction={'row'} align={'center'}>
             <Text fontWeight={800} fontSize={'xl'}>

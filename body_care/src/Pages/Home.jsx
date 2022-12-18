@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Carousel from '../Components/Carousels';
 import MainFooter from '../Components/MainFooter';
 import Navbar from '../Components/Navbar';
@@ -7,20 +7,23 @@ import {Link} from "react-router-dom"
 import { GiShoppingBag } from 'react-icons/gi';
 import Carosuelnew from '../Components/Carosuelnew';
 import { Link as RouterLink } from 'react-router-dom';
+import { ApiContext } from '../Contexts/ApiContex';
 
 function Home(props) {
+    const {seturl,setSearch}=useContext(ApiContext)
     return (
         <div>
             <Navbar/>
+            <Box style={{ fontSize:"25px",backgroundColor:"black", color:"white",marginTop:"10px",padding:"10px"}}><h1>15% off with code SS15 + free Rituals Fragrance Sticks (worth $35) @ $130+ | SHOP NOW{" >" }</h1></Box>
             
             {/* <Carousel/> */}
-            <RouterLink to={"/product"}><Button><h1>Click to View All Products</h1></Button></RouterLink>
+            <RouterLink to={"/dashboard"}><Button><h1>Click to View All Products</h1></Button></RouterLink>
             <Carosuelnew/>
             <div> </div>
             <Stack style={{padding:"20px",marginLeft:"50px"}}>
                 <h1 style={{fontSize:"40px"}}>Shop by Category</h1>
                 <Flex spacing="250px">
-                   <Link> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/04/round_widget_ss_homepage_-_Untitled_Page-062904.png" style={{width:"280px"}}/></Link>
+                  <Box onClick={()=>setSearch("lipstick")}><Link to={"/products"}> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/04/round_widget_ss_homepage_-_Untitled_Page-062904.png" style={{width:"280px"}}/></Link></Box>
                    <Spacer />
                    
                    <Link> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/06/round_widget_ss_homepage_-_Untitled_Page_%281%29-062906.png" style={{width:"280px"}}/></Link>
@@ -46,21 +49,21 @@ function Home(props) {
                 <h1 style={{fontSize:"40px",margin:"20px"}}>Trending Offers</h1>
 
                  <Flex  spacing="250px">
-                   <Box style={{justifyContent:"center",alignItems:"center",display:"flex",flexDirection:"column"}}><Link> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/53/original-500x500-041753.jpeg" style={{width:"350px"}}/></Link>
+                   <Box onClick={()=>setSearch("mascara")} style={{justifyContent:"center",alignItems:"center",display:"flex",flexDirection:"column"}}><Link to={"/products"}> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/53/original-500x500-041753.jpeg" style={{width:"350px",borderRadius:"50%"}}/></Link>
                    <h1  style={{fontSize:"20px",margin:"20px"}}>SkinCeuticals Gift</h1>
                    <p>Receive a SkinCeuticals Resveratrol BE 4ml (Worth $21) when you spend $220 or more on the brand.</p>
                    <Button marginBottom={"20px"} marginTop={"20px"}>SHOP NOW</Button>
                    </Box >
                    <Spacer />
-                   <Box style={{justifyContent:"center",alignItems:"center",display:"flex",flexDirection:"column"}}>
-                   <Link> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/05/original-500x500-041805.jpeg" style={{width:"350px"}}/></Link>
+                   <Box onClick={()=>setSearch("foundation")} style={{justifyContent:"center",alignItems:"center",display:"flex",flexDirection:"column"}}>
+                   <Link to={"/products"}> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/05/original-500x500-041805.jpeg" style={{width:"350px",borderRadius:"50%"}}/></Link>
                    <h1  style={{fontSize:"20px",margin:"20px"}}>LAST CHANCE: 20% off SkinMedica + gift</h1>
                    <p>Receive a FREE SkinMedica Eye Illuminating Kit (Worth $135) when you spend $250 or more on the brand.</p>
                    <Button marginBottom={"20px"} marginTop={"20px"}>SHOP NOW</Button>
                    </Box>
                    <Spacer />
-                   <Box style={{justifyContent:"center",alignItems:"center",display:"flex",flexDirection:"column"}}>
-                  <Link> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/17/Obagi.ss-094517.jpg" style={{width:"350px",borderRadius:"50%"}}/></Link>
+                   <Box onClick={()=>setSearch("eyeshadow")} style={{justifyContent:"center",alignItems:"center",display:"flex",flexDirection:"column"}}>
+                  <Link to={"/products"}> <img alt="" src="https://static.thcdn.com/images/small/webp/widgets/121-us/17/Obagi.ss-094517.jpg" style={{width:"350px",borderRadius:"50%"}}/></Link>
                   <h1  style={{fontSize:"20px",margin:"20px"}}>Obagi Clinical gift</h1>
                    <p>Receive an Obagi Clinical Vitamin C + Eye Brightener (Worth $8) when you spend $100 or more on the brand.</p>
                    <Button marginBottom={"20px"} marginTop={"20px"}>SHOP NOW</Button>

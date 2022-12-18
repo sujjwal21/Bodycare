@@ -22,7 +22,9 @@ import { Link as RouterLink } from 'react-router-dom';
 
 export default function SignupCard() {
   const [showPassword, setShowPassword] = useState(false);
-
+ const handelSignup=()=>{
+  alert("Registered Succesfully")
+ }
   return (
     <Stack>
       <Navbar/>
@@ -37,7 +39,7 @@ export default function SignupCard() {
             Sign up
           </Heading>
           <Text fontSize={'lg'} color={'gray.600'}>
-            to enjoy all of our cool features ✌️
+            to enjoy all of our cool Products ✌️
           </Text>
         </Stack>
         <Box
@@ -80,7 +82,8 @@ export default function SignupCard() {
               </InputGroup>
             </FormControl>
             <Stack spacing={10} pt={2}>
-              <Button
+              <Button 
+              onClick={handelSignup}
                 loadingText="Submitting"
                 size="lg"
                 bg={'blue.400'}

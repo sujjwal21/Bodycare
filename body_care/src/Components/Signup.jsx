@@ -17,13 +17,17 @@ import React from 'react'
 import { useContext } from 'react'
 // import { useEffect } from 'react'
 import { useState } from 'react'
+import { Navigate } from 'react-router-dom';
 
 export default function SignUp() {
    
     const [text,setText]=useState({email:"",password:""})
     const [email,setEmail]=useState("")
     const [password,setpassword]=useState("")
-    
+    const handelsignin=()=>{
+      alert("SignIn Successfully")
+      return <Navigate to="/dashboard"/>
+    }
   return (
     <Stack>
       <Navbar/>
@@ -51,7 +55,7 @@ export default function SignUp() {
               <Checkbox>Remember me</Checkbox>
               {/* <Link color={'blue.500'}>Forgot password?</Link> */}
             </Stack>
-            <Button colorScheme={'blue'} variant={'solid'}>
+            <Button onClick={handelsignin} colorScheme={'blue'} variant={'solid'}>
               Sign in
             </Button>
           </Stack>

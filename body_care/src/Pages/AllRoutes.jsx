@@ -1,9 +1,11 @@
 import {Routes,Route} from "react-router-dom";
 import SignIn from "../Components/SignIn";
 import SignUp from "../Components/Signup";
+import Dashboard from "./Dashboard";
 import Home from "./Home"
 import ProductsByBrand from "./ProductByBrand";
 import Products from "./Products";
+import SingleProductPage from "./SingleProductPage";
 
 export default function AllRoutes(){
 
@@ -12,7 +14,8 @@ export default function AllRoutes(){
         <Route path="/" element={<Home/>}></Route>
         <Route path="/login" element={<SignIn/>}></Route>
         <Route path="/register" element={<SignUp/>}></Route>
-        <Route path="/login/product" element={<Products/>}></Route>
-        <Route path="/products" element={<ProductsByBrand/>}></Route>
+        <Route path="/products" element={<Products/>}></Route>
+        <Route path="/dashboard" element={<Dashboard/>}></Route>
+        <Route path="/dashboard/:id" element={<SingleProductPage/>}></Route>
     </Routes>
 }
