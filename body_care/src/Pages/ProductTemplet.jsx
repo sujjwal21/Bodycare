@@ -62,13 +62,13 @@ export default function ProductTemplate({image,brand,description,category,price,
         </Box>
         <Stack pt={10} align={'center'}>
           <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
-           <h1> Brand:{brand}</h1>
+           <h1> Categorey:{category}</h1>
           </Text>
           <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-           Categorey:{category}
+           Brand:{brand}
           </Heading>
-          <Text noOfLines={1} >Description:--{description}</Text>
-          <p>Type:{type}</p>
+          <Text noOfLines={2} >Description:--{description}</Text>
+          <p>Type: Beauty Cosmatic{type}</p>
           <Stack direction={'row'} align={'center'}>
             <Text fontWeight={800} fontSize={'xl'}>
               ₹{11+(+price)}

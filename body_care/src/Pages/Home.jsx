@@ -14,10 +14,11 @@ function Home(props) {
     return (
         <div>
             <Navbar/>
-            <Box style={{ fontSize:"25px",backgroundColor:"black", color:"white",marginTop:"10px",padding:"10px"}}><h1>15% off with code SS15 + free Rituals Fragrance Sticks (worth $35) @ $130+ | SHOP NOW{" >" }</h1></Box>
+            <Box style={{ fontSize:"25px",backgroundColor:"black", color:"white",marginTop:"10px",padding:"10px"}}><h1>15% off with code SS15 + free Rituals Fragrance Sticks (worth $35) @ $130+ | SHOP NOW{" >" }</h1>
+            <RouterLink to={"/dashboard"}><Button style={{backgroundColor:"gray"}}><h1>Click to View All Products</h1></Button></RouterLink></Box>
             
             {/* <Carousel/> */}
-            <RouterLink to={"/dashboard"}><Button><h1>Click to View All Products</h1></Button></RouterLink>
+            {/* <RouterLink to={"/dashboard"}><Button><h1>Click to View All Products</h1></Button></RouterLink> */}
             <Carosuelnew/>
             <div> </div>
             <Stack style={{padding:"20px",marginLeft:"50px"}}>
@@ -42,7 +43,7 @@ function Home(props) {
                    <Spacer />
 
                 </Flex>
-                <h1 style={{fontSize:"40px",margin:"20px"}}>Discover Holiday fun</h1>
+                {/* <h1 style={{fontSize:"40px",margin:"20px"}}>Discover Holiday fun</h1> */}
 
                 {/* carosuel need to be preseny here */}
 
