@@ -32,6 +32,7 @@ import { useState,useEffect, useContext } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import ProductTemplate from '../Pages/ProductTemplet';
 import { ApiContext } from '../Contexts/ApiContex';
+// import { Link as RouterLink } from 'react-router-dom';
 
 
 
@@ -124,7 +125,7 @@ export default function Navbar() {
                         _hover={{
                             bg: 'pink.300',
                         }}>
-                            Cart
+                           <RouterLink to="/wishlist"> Wishlist</RouterLink>
                          {/* <Button onClick={()=>setSignup(!signup)}>Sign in</Button>
                         {signup?<SignUp/>:""} */}
                     </Button>

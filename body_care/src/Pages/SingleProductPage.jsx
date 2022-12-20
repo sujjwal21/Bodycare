@@ -7,7 +7,7 @@ import Navbar from '../Components/Navbar';
 import MainFooter from '../Components/MainFooter';
 import { ApiContext } from '../Contexts/ApiContex';
 
-function SingleProductPage(props) {
+function SingleProductPage() {
     const {id}=useParams()
     const {url}=useContext(ApiContext)
  const [data,setData]=useState([])

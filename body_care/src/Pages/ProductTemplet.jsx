@@ -14,8 +14,13 @@ import { BsHeartFill, BsHeart } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 
-export default function ProductTemplate({image,brand,description,category,price,type,id}) {
+export default function ProductTemplate({image,brand,description,category,price,type,id,el}) {
    const [liked, setLiked] = useState(false);
+   const handelcart=(el)=>{
+    let data=JSON.parse(localStorage.getItem("cart"))||[];
+    data.push(el)
+    localStorage.setItem("cart",JSON.stringify(data))
+   }
   return (
     <Center py={12}>
       <Box
@@ -85,7 +90,10 @@ export default function ProductTemplate({image,brand,description,category,price,
             roundedBottom={'sm'}
             borderLeft={'1px'}
             cursor="pointer"
-            onClick={() => setLiked(!liked)}>
+            onClick={() => {
+              setLiked(!liked)
+              handelcart(el)
+              }}>
             {liked ? (
               <BsHeartFill fill="red" fontSize={'24px'} />
             ) : (

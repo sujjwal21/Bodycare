@@ -21,7 +21,7 @@ function ProductsByBrand(   ) {
         <div>
             <Grid templateColumns='repeat(4, 1fr)' gap={6}>
             {/* <h1>hello</h1> */}
-            {data&&data?.map((el)=><ProductTemplate image={el.api_featured_image} brand={el.brand} description={el.description} category={el.category} price={el.price} type={el.type} id={el.id}
+            {data&&data?.map((el)=><ProductTemplate image={el.api_featured_image} brand={el.brand} description={el.description} category={el.category} price={el.price} type={el.type} id={el.id} el={el}
              key={el.id} />)}
             </Grid>
         </div>

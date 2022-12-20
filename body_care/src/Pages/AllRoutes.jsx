@@ -6,6 +6,7 @@ import Home from "./Home"
 import ProductsByBrand from "./ProductByBrand";
 import Products from "./Products";
 import SingleProductPage from "./SingleProductPage";
+import Wishlish from "./Wishlish";
 
 export default function AllRoutes(){
 
@@ -14,6 +15,7 @@ export default function AllRoutes(){
         <Route path="/" element={<Home/>}></Route>
         <Route path="/login" element={<SignIn/>}></Route>
         <Route path="/register" element={<SignUp/>}></Route>
+        <Route path="/wishlist" element={<Wishlish/>}></Route>
         <Route path="/products" element={<Products/>}></Route>
         <Route path="/dashboard" element={<Dashboard/>}></Route>
         <Route path="/dashboard/:id" element={<SingleProductPage/>}></Route>
