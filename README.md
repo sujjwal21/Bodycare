@@ -30,7 +30,6 @@ clone of skincare using React  (C_w project _Unit_4) -It is cosmetic e-commerce 
 ## Let's Dive into What we have made
 
 ## Home Page :
-![pear1](https://user-images.githubusercontent.com/57268357/214032034-0a42c790-5f0e-4598-a7c7-9692fdb05f0b.PNG)
 ![Screenshot_20230228_013147](https://user-images.githubusercontent.com/112061123/221796041-7df8b9a3-b3d6-4216-937e-2f9b07c184b8.png)
 
 <br/>
